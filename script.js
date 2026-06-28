@@ -497,26 +497,29 @@ const text=button.querySelector(".unlock-text");
 
 button.addEventListener("mouseenter",()=>{
 
-text.innerHTML="✓ Access Granted";
+document.querySelectorAll(".unlock-btn").forEach(button => {
 
-setTimeout(()=>{
+    const text = button.querySelector(".unlock-text");
 
-text.innerHTML="📄 Open PDF ↗";
+    button.addEventListener("mouseenter", () => {
 
-},450);
+        text.innerHTML = "✓ Access Granted";
+
+        setTimeout(() => {
+
+            text.innerHTML = "📄 Open PDF ↗";
+
+        }, 450);
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+        text.innerHTML = "Unlock Credential";
+
+    });
 
 });
-
-button.addEventListener("mouseleave",()=>{
-
-text.innerHTML="Unlock Credential";
-
-});
-
-});
-const hamburger=document.getElementById("hamburger");
-
-const nav=document.querySelector(".nav-links");
 
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector(".nav-links");
