@@ -518,16 +518,25 @@ const hamburger=document.getElementById("hamburger");
 
 const nav=document.querySelector(".nav-links");
 
-hamburger.onclick=()=>{
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector(".nav-links");
 
-nav.classList.toggle("active");
+if (hamburger && nav) {
 
-}document.querySelectorAll(".nav-links a").forEach(link=>{
+    hamburger.onclick = () => {
 
-link.onclick=()=>{
+        nav.classList.toggle("active");
 
-nav.classList.remove("active");
+    };
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.onclick = () => {
+
+            nav.classList.remove("active");
+
+        };
+
+    });
 
 }
-
-});
