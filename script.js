@@ -514,3 +514,20 @@ text.innerHTML="Unlock Credential";
 });
 
 });
+const hamburger=document.getElementById("hamburger");
+
+const nav=document.querySelector(".nav-links");
+
+hamburger.onclick=()=>{
+
+nav.classList.toggle("active");
+
+}document.querySelectorAll(".nav-links a").forEach(link=>{
+
+link.onclick=()=>{
+
+nav.classList.remove("active");
+
+}
+
+});
