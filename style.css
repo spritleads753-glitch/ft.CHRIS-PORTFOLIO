@@ -4205,3 +4205,83 @@ transition:.35s;
 letter-spacing:.5px;
 
 }
+/*==============================
+MOBILE NAVIGATION
+==============================*/
+
+.hamburger{
+    display:none;
+    width:35px;
+    height:28px;
+    cursor:pointer;
+    z-index:9999;
+}
+
+.hamburger span{
+    display:block;
+    height:3px;
+    margin:6px 0;
+    background:#fff;
+    border-radius:20px;
+    transition:.4s;
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+padding:18px 20px;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.nav-links{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:75%;
+
+height:100vh;
+
+background:rgba(10,10,30,.95);
+
+backdrop-filter:blur(25px);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:35px;
+
+transition:.45s;
+
+z-index:999;
+
+}
+
+.nav-links.active{
+
+right:0;
+
+}
+
+.resume-btn{
+
+display:none;
+
+}
+
+}
