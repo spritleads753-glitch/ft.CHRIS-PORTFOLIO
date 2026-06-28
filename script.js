@@ -497,49 +497,20 @@ const text=button.querySelector(".unlock-text");
 
 button.addEventListener("mouseenter",()=>{
 
-document.querySelectorAll(".unlock-btn").forEach(button => {
+text.innerHTML="✓ Access Granted";
 
-    const text = button.querySelector(".unlock-text");
+setTimeout(()=>{
 
-    button.addEventListener("mouseenter", () => {
+text.innerHTML="📄 Open PDF ↗";
 
-        text.innerHTML = "✓ Access Granted";
-
-        setTimeout(() => {
-
-            text.innerHTML = "📄 Open PDF ↗";
-
-        }, 450);
-
-    });
-
-    button.addEventListener("mouseleave", () => {
-
-        text.innerHTML = "Unlock Credential";
-
-    });
+},450);
 
 });
 
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector(".nav-links");
+button.addEventListener("mouseleave",()=>{
 
-if (hamburger && nav) {
+text.innerHTML="Unlock Credential";
 
-    hamburger.onclick = () => {
+});
 
-        nav.classList.toggle("active");
-
-    };
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.onclick = () => {
-
-            nav.classList.remove("active");
-
-        };
-
-    });
-
-}
+});
